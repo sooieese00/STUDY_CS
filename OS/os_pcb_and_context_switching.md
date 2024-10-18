@@ -25,7 +25,7 @@ cpu가 각 프로세스들을 구분할 수 있어야 관리가 가능
 > 운영체제가 각 프로세스를 관리하기 위해 사용하는 데이터 구조
 > 
 
-![image.png](OS\img\os_pcb.png)
+![image.png](./img/os_pcb.png)
 
 **생성과정**
 
@@ -49,7 +49,7 @@ cpu가 각 프로세스들을 구분할 수 있어야 관리가 가능
      ⇒ 프로세스 교체 작업에서 효율적
     
 
-![image.png](OS\img\os_process_table.png)
+![image.png](./img/os_process_table.png)
 
 <br>
 
@@ -97,7 +97,7 @@ cpu가 각 프로세스들을 구분할 수 있어야 관리가 가능
 2. 새로운 프로세스의 context를 PCB에서 읽어와 레지스터에 적재
 3. 새로운 프로세스 (이전에 중단된 지점부터) 실행
 
-![image.png](OS\img\os_context_switching.png)
+![image.png](./img/os_context_switching.png)
 
 <br>
 
