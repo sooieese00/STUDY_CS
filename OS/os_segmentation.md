@@ -2,7 +2,7 @@
 
 단순 메모리 관리 기법 : 가상주소공간 전체를 물리메모리에 탑재하면서 비효율 문제
 
-![image.png](OS\img\os_simple_memory_management.png)
+![image.png](./img/os_simple_memory_management.png)
 
 - 가상 주소 공간에서 Stack과 Heap 사이 사용하지 않는 공간이 할당되어 비효율성
 - 가상주소공간이 물리메모리보다 큰 경우는 실행이 어려움
@@ -12,7 +12,7 @@
 
 가상 주소 공간을 논리적 단위인 세그먼트로 나누어 각각을 실제 메모리 주소 공간에 독립적으로 할당
 
-![image.png](OS\img\os_segmentation.png)
+![image.png](./img/os_segmentation.png)
 - 사용하지 않는 공간에 대한 비효율 해결
 - 프로그램의 논리적인 단위에 따라 일반적으로 Code, Stack, Heap으로 세그먼트를 나눔
 
@@ -29,11 +29,11 @@
     `세그먼트 테이블 = segment id (인덱스) + limit (크기) + base address (시작주소) + ...`  
     
 
-![image.png](OS\img\os_segmentation_virtual_pysical_mapping.png)
+![image.png](./img/os_segmentation_virtual_pysical_mapping.png)
 
 ### 4. 주소 계산
 
-![image.png](OS\img\os_segmentation_address_translation.png)
+![image.png](./img/os_segmentation_address_translation.png)
 
 1. 논리주소 첫 4비트인 `segment id` 를 인덱스로 세그먼트 테이블에 접근
 2. 논리주소의  `offset`과 테이블 내 해당 세그먼트의 `limit`을 비교
@@ -64,7 +64,7 @@
 
 ex> 여러 프로세스가 동일한 라이브러리 코드를 참조할 때, 하나의 세그먼트를 공유하여 메모리 자원을 절약. 읽기 전용으로 설정해 코드에 대한 무단 수정도 방지
 
-![image.png](OS\img\os_segment_table.png)
+![image.png](./img/os_segment_table.png)
 
 ### 6. 문제점
 
